@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build SDL3 Game",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "g++ -std=c++17 -g (Get-ChildItem src_code/*.cpp) -Iinclude -Llib -lSDL3 -o main.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "C++SDL3"
+        }
+    ]
+}
